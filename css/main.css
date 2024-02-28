@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+:root {
+  --main-color: #2196f3;
+  --second-color: rgba(0, 0, 0, 0.7);
+  --text-color: rgba(0, 0, 0, 0.6);
+  --link-size: 1.3rem;
+  --main-transition: 0.3s;
+  --bg-white: #ffffff;
+  --grey-background: #f8f9f9;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::selection {
+  background-color: var(--main-color);
+  color: var(--bg-white);
+}
+.t-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.t-center {
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+.flex-items {
+  display: flex;
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.rounded {
+  border-radius: 6px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.btn-primary {
+  background-color: var(--main-color);
+  color: var(--bg-white);
+}
+
+/* alsaklskalks */
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  background-color: var(--bg-white);
+  position: relative;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 4rem;
+}
+header .logo a {
+  color: var(--main-color);
+}
+header .logo:hover {
+  opacity: 0.6;
+}
+nav {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+}
+
+header .nav-lists > li > a:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+
+nav ul li {
+  padding: 1.2rem 1rem;
+  color: var(--second-color);
+}
+nav ul li a {
+  color: var(--second-color);
+  font-weight: 600;
+
+  padding: 0 30px;
+
+  transition: var(--main-transition);
+  overflow: hidden;
+}
+
+nav ul li:hover {
+  background-color: #fafafa;
+}
+nav ul li:hover a {
+  color: var(--main-color);
+}
+
+nav .active {
+  color: var(--main-color);
+}
+
+header button {
+  background-color: var(--bg-white);
+  border: 1px solid var(--main-color);
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+header button a {
+  color: var(--main-color);
+}
+header button:hover {
+  background-color: var(--main-color);
+  color: var(--bg-white);
+}
+header button:hover > a {
+  color: var(--bg-white);
+}
+header .icon {
+  display: none;
+}
+header .icon i {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--bg-white);
+}
+
+/* hero section  */
+.hero {
+  background-image: url("../images/airplane-taking-off-airport-passenger-600nw-382266112.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  position: relative;
+}
+.hero .hero-one {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hero .main-title {
+  animation: up-and-down 3s linear infinite;
+}
+.hero .hero-one h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: var(--bg-white);
+}
+
+.hero .hero-one h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  color: var(--bg-white);
+}
+.hero-two {
+  padding: 20px 10px 40px;
+  background-color: var(--bg-white);
+  width: 800px;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 40px;
+  border-radius: 6px;
+}
+.hero-two label {
+  display: block;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.hero-two .search,
+.hero-two .date,
+.hero-two .price {
+  background-color: var(--text-color);
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  padding: 8px 10px;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  width: 250px;
+}
+.hero-two .input-group input {
+  background-color: transparent;
+  padding: 5px 7px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.hero-two input::placeholder {
+  color: var(--bg-white);
+}
+.hero-two .date-in {
+  color: var(--bg-white);
+}
+
+.filter-icon {
+  position: absolute;
+  bottom: -20px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--main-color);
+  gap: 0.3rem;
+  align-items: center;
+  color: var(--bg-white);
+  cursor: pointer;
+}
+.filter-icon span {
+  font-weight: bold;
+}
+.hero .icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 0.8rem;
+}
+.hero .icons i {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--bg-white);
+  cursor: pointer;
+}
+.hero .icons i:hover {
+  color: var(--main-color);
+}
+
+/* alll dest  */
+
+/* ---  */
+.all-dest {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.main-tittle {
+  position: relative;
+  width: fit-content;
+  margin: 50px auto;
+  padding: 10px 20px;
+  border: 1px solid black;
+  transition: var(--main-transition);
+}
+.main-tittle::before,
+.main-tittle::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-tittle::before {
+  left: -30px;
+}
+.main-tittle::after {
+  right: -30px;
+}
+.main-tittle:hover::before {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+.main-tittle:hover::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+    height: 12px;
+    width: 12px;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+    height: 12px;
+    width: 12px;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.all-dest .cards {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
+.card:hover {
+  transform: translateY(-5px);
+  transition: var(--main-transition);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card img:hover {
+  transform: scale(1.09);
+  transition: var(--main-transition);
+}
+
+.card .card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 30px;
+}
+.card .location {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.card .price {
+  align-items: center;
+  padding: 10px 0;
+}
+.card h2 {
+  margin-top: 0;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.card .price span {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+.card button {
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  background-color: var(--main-color);
+
+  padding: 10px 10px;
+  border-radius: 20px;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+.card button a {
+  color: var(--bg-white);
+  font-weight: bold;
+}
+
+footer {
+  padding: 1rem 0;
+  background-color: var(--text-color);
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+footer .container {
+  justify-content: space-between;
+}
+footer .column-1 {
+  /* width: 400px; */
+}
+footer .column-1 .airplane {
+  align-items: center;
+  gap: 1rem;
+  top: 50%;
+  font-size: 100px;
+  opacity: 0.6;
+  color: var(--second-color);
+  font-weight: bold;
+}
+footer .column-1 i {
+  font-size: 100px;
+  color: var(--main-color);
+  opacity: 0.8;
+}
+
+footer .column-1 .airplane:hover {
+  color: var(--main-color);
+  cursor: pointer;
+  opacity: 1;
+}
+footer .column-2 {
+  /* width: 180px; */
+}
+footer .column-2 ul {
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .column-2 ul a {
+  font-size: 20px;
+  color: var(--bg-white);
+}
+footer .column-2 ul a:hover {
+  text-decoration: underline;
+}
+footer .column-3 {
+  width: 320px;
+}
+footer .column-3 p {
+  color: var(--bg-white);
+}
+footer .column-4 {
+}
+footer .column-4 ul {
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .column-4 ul li {
+  display: flex;
+
+  align-items: center;
+}
+footer .column-4 ul li a {
+  color: var(--bg-white);
+  display: flex;
+  gap: 10px;
+
+  align-items: center;
+}
+
+footer .column-4 ul li a:hover {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+@keyframes up-and-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

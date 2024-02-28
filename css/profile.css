@@ -1,0 +1,91 @@
+:root {
+  --main-color: #2196f3;
+  --second-color: rgba(0, 0, 0, 0.7);
+  --text-color: rgba(0, 0, 0, 0.6);
+  --link-size: 1.3rem;
+  --main-transition: 0.3s;
+  --bg-white: #ffffff;
+  --grey-background: #f8f9f9;
+}
+.profile {
+  background-color: #7d7d7d;
+}
+.profile .essentials {
+  padding: 20px;
+  background-color: var(--main-color);
+  height: 90vh;
+}
+.profile .container {
+  gap: 3rem;
+}
+.essentials .main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.essentials {
+  position: relative;
+  width: 400px;
+}
+.essentials .image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.essentials .full-name h1 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--bg-white);
+}
+.profile .more-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.all {
+  padding: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--bg-white);
+}
+.all {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 700px;
+}
+.all > div {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: nowrap;
+}
+.all div span:nth-child(1) {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.all div span:nth-child(2) {
+  font-weight: bold;
+}
+.all div span:nth-child(1) > i {
+  margin-right: 10px;
+}
+.button {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--bg-white);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+.button:hover {
+  color: var(--bg-white);
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
